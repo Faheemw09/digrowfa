@@ -8,26 +8,40 @@ The application allows users to create forms with a name, description, and a set
 
 ## Prerequisites
 
+Before you begin, ensure you have the following installed:
 
-bash
+- Node.js
+- MongoDB
 
-cd your-repository/backend
- ## Install dependencies:
+## Clone Repository
+
+Use the following command to clone the repository:
+
+```bash
+git clone https://github.com/Faheemw09/digrowfa.git
+
+
+# Backend Installation and Setup
+Navigate to the backend directory:
+
+
+cd digrowfa/backend
+Install dependencies:
 
 
 npm install
-Start the backend server:
+#Start the backend server:
 
 
 npm start
 The backend server will be accessible at http://localhost:8080.
 
- # Frontend Installation and Setup
+# Frontend Installation and Setup
+Navigate to the frontend directory:
 
 
-
-cd your-repository/frontend
-# Install dependencies:
+cd digrowfa/frontend
+Install dependencies:
 
 
 npm install
