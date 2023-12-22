@@ -17,31 +17,30 @@ const Form = () => {
     const { value } = event.target;
     setFormData((prevFormData) => {
       const updatedFAQ = [...prevFormData.faq];
-      if (field === 'answers') {
+      if (field === "answers") {
         updatedFAQ[0].answers[answerIndex] = value;
-      } else if (field === 'question') {
+      } else if (field === "question") {
         updatedFAQ[0].question = value;
       } else {
-        
         return {
           ...prevFormData,
           [field]: value,
         };
       }
-  
+
       return {
         ...prevFormData,
         faq: updatedFAQ,
       };
     });
   };
-  
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const response = await axios.post(
-        "https://slate-gray-crocodile-slip.cyclic.app/form/create",
+        "http://localhost:3000/form/create",
         formData
       );
       const { newForm } = response.data;
@@ -64,7 +63,7 @@ const Form = () => {
 
   const loadForms = async () => {
     try {
-      const response = await axios.get("https://slate-gray-crocodile-slip.cyclic.app/form/");
+      const response = await axios.get("http://localhost:3000/form/");
       setForms(response.data);
     } catch (error) {
       console.error(error);
